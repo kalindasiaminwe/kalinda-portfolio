@@ -1,49 +1,56 @@
-import * as React from "react"
-import { Link } from "gatsby"
+import React from "react"
+import SEO from "../components/seo"
 
-const pageStyles = {
-  color: "#232129",
-  padding: "96px",
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
-}
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
-}
+import Layout from "../components/layout"
+import notfoundimg from "../images/notfound.svg"
 
-const paragraphStyles = {
-  marginBottom: 48,
-}
-const codeStyles = {
-  color: "#8A6534",
-  padding: 4,
-  backgroundColor: "#FFF4DB",
-  fontSize: "1.25rem",
-  borderRadius: 4,
-}
+const Page404 = () => (
+  <Layout>
+    <SEO title="Page Not Found" />
+    <section className="page404">
+      <div className="container">
+        <div className="row row-404 mt-4 float-right">
+          <div className="img-container">
+            <img src={notfoundimg} alt="Vector of an alien" />
+          </div>
+        </div>
+        <div className="row row-404 mt-4 ml-4">
+          <h1>Uh-oh.</h1>
+          <h2>There's nothing here :(</h2>
+          <p>For the meantime, choose which alien character you are:</p>
+          <br />
+          <Slider />
+        </div>
+      </div>
+    </section>
+  </Layout>
+)
 
-const NotFoundPage = () => {
+const Slider = () => {
+  const [position, setPosition] = React.useState("1")
+  let text = null
+  if (position === "0") {
+    text = "👽"
+  } else if (position === "1") {
+    text = "👾"
+  } else if (position === "2") {
+    text = "🤖"
+  } else if (position === "3") {
+    text = "👻"
+  }
   return (
-    <main style={pageStyles}>
-      <h1 style={headingStyles}>Page not found</h1>
-      <p style={paragraphStyles}>
-        Sorry 😔, we couldn’t find what you were looking for.
-        <br />
-        {process.env.NODE_ENV === "development" ? (
-          <>
-            <br />
-            Try creating a page in <code style={codeStyles}>src/pages/</code>.
-            <br />
-          </>
-        ) : null}
-        <br />
-        <Link to="/">Go home</Link>.
-      </p>
-    </main>
+    <div>
+      <h3>{text}</h3>
+      <input
+        type="range"
+        step="1"
+        max="3"
+        min="0"
+        value={position}
+        onChange={e => setPosition(e.target.value)}
+      />
+    </div>
   )
 }
 
-export default NotFoundPage
-
-export const Head = () => <title>Not found</title>
+export default Page404

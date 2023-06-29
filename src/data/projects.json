@@ -1,0 +1,44 @@
+[
+    {
+      "project": "ChitongaASR",
+      "language": " Natural Language Processing",
+      "description": "Automatic speech recognition system(ASR) models for 5hrs of speechdata in ChiTonga, a low resource langauge in Zambia.",
+      "link": "https://github.com/kalindasiaminwe/ChitongaASR",
+      "thing": ["Python", "HuggingFace Transformers", "Whisper", "Wav2Vec2", "FairSEQ", "KenLM Language Model Toolkit"]
+
+    },
+    {
+      "project": "Designing Bank Marketing Database",
+      "language": "Python | PostgreSQL",
+      "description": "Data cleaning and transformation to enable the creation of a database to hold information about bank marketing campaigns.",
+      "link": "https://github.com/kalindasiaminwe/Designing-a-Bank-Marketing-Database",
+      "thing": ["Python", "PostgreSQL"]
+
+    },
+    {
+      "project": "Upwork gigs",
+      "language": " Various",
+      "description": "A repo of the work I have done as a freelancer on upwork. The work varies from web scrapping, data mining, and excel automation, etc.",
+      "link": "https://github.com/kalindasiaminwe/Upwork-gigs",
+      "thing": ["Python", "Data Analysis", "Excel", "Content Writing", "Web Scrapping", "More..."]
+
+    },
+    {
+      "project": "Predicting Customer Credit Scores",
+      "language": " Machine Learning",
+      "description": "A predictive model to predict the credit score of customers.",
+      "link": "https://github.com/kalindasiaminwe/Predicting-Customer-Credit-Scores",
+      "thing": ["Python", "Scikit-learn", "Exploratory data analysis (EDA)", "Predictive modeling", "Kaggle"]
+
+    },
+    {
+      "project": "Producer & Consumer Kafka Application",
+      "language": "Kotlin | Kafka",
+      "description": "A simple producer-consumer kafka application.",
+      "link": "https://github.com/kalindasiaminwe/KafkaApplication",
+      "thing": ["Kafka", "Kotlin"]
+
+    }
+
+  ]
+  
